@@ -1,0 +1,62 @@
+GHBNetloadApplet
+================
+
+
+This small piece of software supplies an applet for the gnome desktop. It
+displays your current netload in the gnome toolbar.
+
+
+Compiling / Installing
+----------------------
+
+See INSTALL, but it is basically "./configure && make && sudo make install".
+
+
+Configuring
+-----------
+
+GHBNetloadApplet depends on the Api that is made available by the NetAdmins of
+the GHB (thanks by the way!). Therefore you have to create (or copy from
+/usr/local/share/ghbnetloadapplet/ghbnetloadapplet.sample.xml (usually)) an
+xml-file in your home directory called .ghbnetloadapplet.xml, which contains at
+least "key", but zero or more of the others: 
+<key>: it contains the api-key, which you can request at 
+http://ghb.fh-furtwangen.de/api.  
+<update>: the amount of seconds which must pass until 
+a new request to the servers is made.  
+<maxtraffic>: just for reference, you can not change your limit here
+;-). It is usually set to 4.7 GB, but you can change it to set your own
+personal limit or [insert other use here]
+
+
+Warning 
+-------
+
+This is still beta software, and the following features are not existent for
+now:
+*	support for multiple hosts, you can only use it if you have just one
+	host. Support for this will be added in the near future 
+
+*	forced refresh
+
+*	<add your requested feature here>
+
+
+I can not give you an assurance that the display is accurate, so don't blame me
+if you are over the limit. Please use the interface supplied by the GHB
+NetAdmins to check your traffic frequently....
+
+
+
+Feedback
+--------
+
+Feedback / bug reports are welcome, please send them to: mail@jonasw.de or talk
+to me in person
+
+
+
+Regards, 
+	Jonas Weber
+
+

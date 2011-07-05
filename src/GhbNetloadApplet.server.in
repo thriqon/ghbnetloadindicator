@@ -1,0 +1,26 @@
+<oaf_info>
+<oaf_server iid="OAFIID:GhbNetloadApplet_Factory" type="exe"
+            location="@prefix@/bin/ghbnetloadapplet">
+
+        <oaf_attribute name="repo_ids" type="stringv">
+                <item value="IDL:Bonobo/GenericFactory:1.0"/>
+                <item value="IDL:Bonobo/Unknown:1.0"/>
+        </oaf_attribute>
+        <oaf_attribute name="name" type="string" value="GHB Netload-Applet Factory"/>
+        <oaf_attribute name="description" type="string" value="displays the current netload params in the GHB"/>
+</oaf_server>
+
+<oaf_server iid="OAFIID:GhbNetloadApplet" type="factory"
+            location="OAFIID:GhbNetloadApplet_Factory">
+
+        <oaf_attribute name="repo_ids" type="stringv">
+                <item value="IDL:GNOME/Vertigo/PanelAppletShell:1.0"/>
+                <item value="IDL:Bonobo/Control:1.0"/>
+                <item value="IDL:Bonobo/Unknown:1.0"/>
+        </oaf_attribute>
+        <oaf_attribute name="name" type="string" value="GHB Netload-Applet"/>
+        <oaf_attribute name="description" type="string" value="displays the current netload params in the GHB"/>
+        <oaf_attribute name="panel:category" type="string" value="Amusements"/>
+        <oaf_attribute name="panel:icon" type="string" value="/usr/share/pixmaps/gnome-nettool.xpm"/>
+</oaf_server>
+</oaf_info>
