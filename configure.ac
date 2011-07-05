@@ -15,6 +15,7 @@ AC_SUBST(GNOME_APPLETS_LIBS)
 
 PKG_CHECK_MODULES([LIBXMLXX], [libxml++-2.6])
 
+#TODO: rewrite with prefix?
 AC_SUBST(BONOBOFILES,["/usr/lib/bonobo/servers/"])
 
 AC_CONFIG_HEADERS([config.h])
