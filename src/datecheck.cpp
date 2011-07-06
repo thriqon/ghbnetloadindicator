@@ -1,6 +1,7 @@
 #include "date.h"
 #include <assert.h>
 #include <exception>
+#include <stdexcept>
 
 extern char* weekdays[];
 
@@ -20,4 +21,10 @@ int main()
 	assert(illegalDate.getMonth() == 3);
 	assert(illegalDate.getYear() == 2011);	
 
+
+	try {
+		GHB::Date TooOldDate (1,1, 1800);
+		assert(false);
+	} catch (std::out_of_range ex)	{ assert(true); }
+	catch (std::exception ex) 	{ assert(false);}
 }

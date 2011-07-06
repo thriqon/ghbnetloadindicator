@@ -14,16 +14,17 @@ namespace GHB
 	{
 		private:
 			uint64_t total;
-			Host& host;
-			Date& date;
-//		protected:
+			const Host& host;
+			Date date;
+		protected:
+			TrafficDay();
 		public:
-			TrafficDay(const uint64_t& total, Host& host, Date& date) : total(total), host(host), date(date) { };
+			TrafficDay(const uint64_t& total, const Host& host, Date& date) : total(total), host(host), date(date) { };
 		
 		public:
 			const uint64_t& getTotal() const { return total; };
-			Host& getHost() const { return host; };
-			Date& getDate() const { return date; };
+			const Host& getHost() const { return host; };
+			const Date& getDate() const { return date; };
 	};
 			
 	class TrafficTotal

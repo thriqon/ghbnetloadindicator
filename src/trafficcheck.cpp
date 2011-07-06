@@ -31,10 +31,14 @@ int main()
 	
 	GHB::Host hx("hostx", "00:00:00...", 3, "not existent");
 	assert(total.getTotalByHost(hx) == 0);
-	
+
 
 	GHB::Date someday(1,1,2001);
 	assert(total.getTotalByDate(someday) == 0);
+
+
+	try { const GHB::TrafficDay& ignored = total.getTrafficDay(h0, today); assert(true); }
+	catch (std::exception ex) { assert(false); }
 
 	try { const GHB::TrafficDay& ignored = total.getTrafficDay(h0, someday); } 
 	catch (std::out_of_range ex) 	{ assert(true); }

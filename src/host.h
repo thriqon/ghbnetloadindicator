@@ -34,7 +34,7 @@ namespace GHB
 			std::string userid;
 			int maxAmountOfHosts;
 
-			const std::vector<Host> hosts;
+			std::vector<Host> hosts;
 		public:
 			Account(const std::string& userid, const int& maxAmountOfHosts, const std::vector<Host>& hosts) : userid(userid), maxAmountOfHosts(maxAmountOfHosts), hosts(hosts) { };
 			

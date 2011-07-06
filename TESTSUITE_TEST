@@ -1,0 +1,4 @@
+to compile with gcov support, use: ./configure CXXFLAGS="-fprofile-arcs -ftest-coverage"
+then exec program
+gcov source-file
+

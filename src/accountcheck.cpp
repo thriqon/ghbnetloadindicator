@@ -15,8 +15,8 @@ int main()
 	GHB::Account myacc("morpheus", maxAmountOfHosts, hosts);
 
 
-
-	assert(myacc[0] == h0);
+	const GHB::Host& myacc0 = myacc[0]; // otherwise ambiguous
+	assert(myacc0 == h0);
 	
 	try { const GHB::Host& ignored = myacc[99]; assert(false); }
 	catch (std::out_of_range ex) 	{ assert(true); }
