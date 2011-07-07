@@ -6,7 +6,7 @@ bin_PROGRAMS=ghbnetloadapplet
 
 AM_CPPFLAGS=$(GNOME_APPLETS_CFLAGS) $(LIBXMLXX_CFLAGS)
 
-ghbnetloadappletSOURCESWITHOUTMAIN=host.cpp traffic.cpp date.cpp traffic.h host.h date.h weekdays.h traffic_xml.cpp traffic_xml.h
+ghbnetloadappletSOURCESWITHOUTMAIN=host.cpp traffic.cpp date.cpp traffic.h host.h date.h weekdays.h traffic_xml.cpp traffic_xml.h apiclient.cpp apiclient.h
 
 
 ghbnetloadapplet_SOURCES=main_test.cpp $(ghbnetloadappletSOURCESWITHOUTMAIN)
