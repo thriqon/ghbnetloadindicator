@@ -4,7 +4,7 @@
 
 namespace GHB
 {
-	class TrafficDayXML : public TrafficDay
+	class TrafficDayXML
 	{
 		private:
 			TrafficDayXML();

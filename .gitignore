@@ -1,2 +1,16 @@
 *.o
-
+Makefile
+Makefile.in
+.deps
+*check
+config.*
+stamp-*
+install-sh
+missing
+aclocal.m4
+autom4te.cache/
+configure
+depcomp
+doc/
+*.server
+ghbnetloadapplet

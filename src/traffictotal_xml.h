@@ -7,7 +7,7 @@
 
 namespace GHB
 {
-	class TrafficTotalXML : public TrafficTotal
+	class TrafficTotalXML
 	{
 		private:
 			TrafficTotalXML();

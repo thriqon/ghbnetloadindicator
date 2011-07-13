@@ -7,6 +7,10 @@
 
 namespace GHB
 {
+	/** \brief represents a host, as used in the GHB
+	  *
+	  * The host is read in during refresh(), also via API
+	  */
 	class Host
 	{
 		private:
@@ -15,14 +19,27 @@ namespace GHB
 			int fwrule;
 			std::string fwrulename;
 		public:
-			Host(const std::string& hostname, const std::string& mac, const int& fwrule, const std::string fwrulename) : hostname(hostname), mac(mac), fwrule(fwrule), fwrulename(fwrulename) { };
+			/** \brief constructs new host 
+			  *
+			  * \param hostname The name given to the host (during registration)
+			  * \param mac the registered MAC-address of this host
+			  * \param fwrule a numeric id for the chosen firewall
+			  * \param fwrulename a verbose name for the firewall
+			  */
+			Host(const std::string& hostname, const std::string& mac, const int& fwrule, const std::string fwrulename);
 
-			// assumes hostname is unique
+			/** \brief compare two hosts assuming hostname is unique */
 			bool operator== (const Host& o) const { return hostname == o.getHostname(); };
-			
+		
+			/** \brief return the hostname */
 			const std::string& getHostname() const { return hostname; };
+
+			/** \brief return the MAC-address */
 			const std::string& getMac() const { return mac; };
+
+			/** \brief return the firewall-rule-id */
 			const int& getFWRule() const { return fwrule; };
+			/** \brief return the firewall-rule-name */
 			const std::string& getFWRuleName() const { return fwrulename; }
 
 	};
