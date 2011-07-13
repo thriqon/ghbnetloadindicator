@@ -62,6 +62,8 @@ namespace GHB
 			{ return hosts.at(index); };
 
 			const Host& operator[] (const std::string& name) const throw (std::out_of_range);
+
+			const std::vector<Host>& getHosts() const { return hosts; };
 	};
 			
 

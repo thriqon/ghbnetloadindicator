@@ -14,7 +14,7 @@ namespace GHB
 			AccountXML();
 		public:
 			/** \brief parses the XML and returns an Account object */
-			static Account parseXML(xmlpp::Element* elem);
+			static Account* parseXML(xmlpp::Element* elem);
 	};
 }
 

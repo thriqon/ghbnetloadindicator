@@ -15,7 +15,7 @@ static const Glib::ustring useridstagname("userid");
  * \param elem an element in a xml-tree. must be <h>
  * \return An Account
  */
-Account AccountXML::parseXML(xmlpp::Element* elem)
+Account* AccountXML::parseXML(xmlpp::Element* elem)
 {
 	const std::string userid = (dynamic_cast<xmlpp::Element*> (elem->get_children("userid").front()))->get_child_text()->get_content();
 
@@ -31,7 +31,7 @@ Account AccountXML::parseXML(xmlpp::Element* elem)
 		vhosts.push_back(HostXML::parseXML(dynamic_cast<xmlpp::Element*> (*it)));
 	}
 
-	return Account(userid, maxAmountOfHosts, vhosts);
+	return new Account(userid, maxAmountOfHosts, vhosts);
 }
 
 

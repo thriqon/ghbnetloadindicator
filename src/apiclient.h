@@ -24,7 +24,6 @@ namespace GHB
 			bool initialized;
 
 
-			void refresh();
 		public:
 			Account& getAccount() throw (ApiClientNotInitialized);
 			TrafficTotal& getTotal() throw  (ApiClientNotInitialized);
@@ -35,6 +34,8 @@ namespace GHB
 
 			void setApiKey (const std::string& newkey);
 			const std::string& getApiKey() const;
+			
+			void refresh();
 	};
 }	
 

@@ -3,10 +3,24 @@
 #include <list>
 #include <vector>
 
+#include "apiclient.h"
+
 #include <iostream>
 
 int main()
 {
+	GHB::ApiClient client;
+	//client.setApiKey(FILL_IN_API_KEY_HERE);
+	client.refresh();
+
+	GHB::Account& acc = client.getAccount();
+	std::cout << "Account (RD!): " << acc.getUserid() << std::endl;
+	const std::vector<GHB::Host>& mhosts = acc.getHosts();
+	for(std::vector<GHB::Host>::const_iterator it = mhosts.begin(); it != mhosts.end(); it++)
+	{
+		std::cout << "  Host: " << it->getHostname() << " (MAC: " << it->getMac() << ")" << std::endl;
+	}
+
 	GHB::Host h0("host0", "00:00:00...", 0, "open house");
 	GHB::Host h1("host1", "00:00:01...", 1, "closed");
 
